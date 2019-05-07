@@ -4,5 +4,5 @@ mysql，建库 mybatis
 
 eclipse，新建 Employee.java
 
-查出数据，封装对象
+查出1号数据数据，封装对象
 
