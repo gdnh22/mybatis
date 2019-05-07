@@ -1,0 +1,25 @@
+package com.hydata.mybatis.test;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.junit.jupiter.api.Test;
+
+class MyBatisTest {
+
+	@Test
+	public void test() throws IOException {
+		//fail("Not yet implemented");
+		//String resource = "org/mybatis/example/mybatis-config.xml";
+		String resource = "mybatis-config.xml";
+		InputStream inputStream = Resources.getResourceAsStream(resource);
+		SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+		
+		Sqlsession openSession = sqlSessionFactory.openSession();
+		
+	}
+
+}

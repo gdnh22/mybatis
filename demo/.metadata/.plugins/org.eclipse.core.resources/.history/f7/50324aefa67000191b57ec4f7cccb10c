@@ -1,0 +1,32 @@
+package com.hydata.mybatis.bean.Employee;
+package com.hydata.mybatis.test;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.junit.jupiter.api.Test;
+
+class MyBatisTest {
+
+	@Test
+	public void test() throws IOException {
+		//fail("Not yet implemented");
+		//String resource = "org/mybatis/example/mybatis-config.xml";
+		String resource = "mybatis-config.xml";
+		InputStream inputStream = Resources.getResourceAsStream(resource);
+		SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+		
+		SqlSession openSession = sqlSessionFactory.openSession();
+		try {
+			Employee empoyee= openSession.selectOne("com.hydata.mybatis.EmployeeMapper.selectEmp",  1); //参数2代表id
+			System.out.println(empoyee);			
+		}finally {
+			openSession.close();
+		}
+	}
+
+}

@@ -14,4 +14,16 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>lib/mybatis-3.4.1.jar</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/lib/mybatis-3.4.1.jar</locationURI>
+		</link>
+		<link>
+			<name>lib/mysql-connector-java-5.1.47-bin.jar</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/lib/mysql-connector-java-5.1.47-bin.jar</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>

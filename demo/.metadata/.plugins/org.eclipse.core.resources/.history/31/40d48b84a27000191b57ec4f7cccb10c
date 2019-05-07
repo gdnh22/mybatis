@@ -1,0 +1,14 @@
+package com.hydata.mybatis.test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class MyBatisTest {
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
+}

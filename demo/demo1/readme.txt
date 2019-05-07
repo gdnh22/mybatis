@@ -22,6 +22,45 @@ private String gender;
 
 设置字体：windows>preferences>General>Appearance>Colors and Fonts，双击text Font设置字体大小。
 
+新建lib文件夹，和src平级
+拖动mybatis-3.4.1.jar到lib下，然后选【link】
+导入依赖包：
+1 log4j
+2 mybatis-3.4.1.jar
+3 mysql-connector-java.jar
+
+添加log4j.xml???
+选中所有jar，【build path】
+
+官方：从 XML 中构建 SqlSessionFactory
+新建mybatis-config.xml
+
+配置节点【dataSource】
+driver com.mysql.jdbc.Driver
+url = jdbc:mysql://localhost:3306/mybatis
+
+复制官方代码：
+String resource = "org/mybatis/example/mybatis-config.xml";
+InputStream inputStream = Resources.getResourceAsStream(resource);
+SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+
+新建一个测试类New JUnit 4 Test：
+New JUnit Test Case
+Name填 MyBatisTest，
+Package填 com.hydata.mybatis.test
+粘贴上述代码
+打包【ctrl+shift+O】，选
+inputStream
+抛异常 add。
+
+修改默认xml路径。
+
+从XML新建一个SqlSessionFactory
+获取SqlSession
+
+import com.hydata.mybatis.bean.Employee;	//导入Employee类
+
+
 提交GIT可以选择【Force overwrite existing】避免错误
 
 Eclipse配置maven
