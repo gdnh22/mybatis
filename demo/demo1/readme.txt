@@ -22,7 +22,7 @@ private String gender;
 
 设置字体：windows>preferences>General>Appearance>Colors and Fonts，双击text Font设置字体大小。
 
-提交GIT可以选择【FORCE】避免错误
+提交GIT可以选择【Force overwrite existing】避免错误
 
 Eclipse配置maven
 window>preferences，Maven>Installations>add>Directory>选目录，勾选新加的maven。

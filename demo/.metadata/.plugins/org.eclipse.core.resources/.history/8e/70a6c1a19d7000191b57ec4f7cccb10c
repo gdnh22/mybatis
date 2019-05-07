@@ -1,0 +1,9 @@
+package com.hydata.mybatis.bean;
+
+public class Employee {
+private Integer id;
+private String lastname;
+private String email;
+private String gender;
+
+}

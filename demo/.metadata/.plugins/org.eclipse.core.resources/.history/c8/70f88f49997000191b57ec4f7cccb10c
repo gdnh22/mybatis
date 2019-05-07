@@ -1,0 +1,5 @@
+package com.hydata.mybatis.bean;
+
+public class Employee {
+
+}
