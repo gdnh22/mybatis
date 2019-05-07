@@ -20,8 +20,8 @@ public class MyBatisTest {
 		SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);	
 		SqlSession session = sqlSessionFactory.openSession();
 		try {
-			Employee blog = (Employee) session.selectOne("com.hydata.mybatis.bean.Employee.selectEmp", 1);
-			System.out.println(blog.toString());
+			Employee blog =  session.selectOne("com.hydata.mybatis.EmployeeMapper.selectEmp", 1);
+			System.out.println(blog);
 		}finally {
 			session.close();
 		}
