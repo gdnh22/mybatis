@@ -9,6 +9,7 @@ last_name varchar(255),
 gender char(1),
 email varchar(255)
 )
+手动添加一条数据 tom 1 tom@test.com
 
 eclipse，新建 Employee.java
 Package填写：com.hydata.mybatis.bean
