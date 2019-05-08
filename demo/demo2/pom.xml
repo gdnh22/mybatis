@@ -50,6 +50,6 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>springboot-mybatis</finalName>
+		<finalName>springboot-mybatis</finalName>	<!-- 需要修改为demo2？？-->
 	</build>
 </project>
