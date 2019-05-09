@@ -18,12 +18,6 @@ https://blog.csdn.net/linzhiqiang0316/article/details/78310884
 --------------------------------------
 连接MYSQL，首先NAVICAT要能正常连接
 
-
-备份数据库mybatis
-默认的数据库位置在哪？
-
-
-
 1 在SpringBoot的启动类型里面增加扫描 Mapper 接口的注解
 2 在application.properties配置文件中添加数据库的支持【对应IEA201901】
 //////////////////----------------------------- start
@@ -44,11 +38,8 @@ spring.datasource.username = root
 spring.datasource.password = Sa123sa4
 //////////////////----------------------------- end
 
-
-3 新建 映射数据库的类
-4 新建一个user表和字段
-注：mybatis和jpa不一样，不会通过映射实体类反向生成数据库的表和字段。
-
+新建数据库mybatis
+新建表
 SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 -- Table structure for user
@@ -69,6 +60,13 @@ CREATE TABLE `user` (
 -- ----------------------------
 INSERT INTO `user` VALUES ('1', '10001', 'user10001', 'no1', '123456', '2017-10-22 15:23:32', '2017-10-22 15:23:35');
 INSERT INTO `user` VALUES ('2', '10002', 'user10002', 'no2', '123456', '2017-10-22 15:23:32', '2017-10-22 15:23:35');
+
+备份数据库mybatis，命名【mybatis_db20190509】
+默认的数据库位置在哪？E:\users\gdnh\Documents\Navicat\MySQL\servers\local\mybatis
+
+3 新建 映射数据库的类UserEntity
+
+注：mybatis和jpa不一样，不会通过映射实体类反向生成数据库的表和字段。
 
 6 编写Mapper接口
 注解方式： @Insert @Delete @Update @Select

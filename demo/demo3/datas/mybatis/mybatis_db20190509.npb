@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BackupProfile Ver="1.2">
+  <General ConnectionName="local" DatabaseName="mybatis" SchemaName="" Compressed="true" LockAllTables="false" UseSingleTransaction="false" UseSpecifyFileName="true" FileName="mybatis_db20190509" Comments="user，两条数据。"/>
+  <Tables SelectAll="true"/>
+  <Views SelectAll="false"/>
+  <Functions SelectAll="false"/>
+  <Events SelectAll="false"/>
+  <Sequences SelectAll="false"/>
+  <Indexes SelectAll="false"/>
+  <Triggers SelectAll="false"/>
+</BackupProfile>

@@ -1,0 +1,1 @@
+mynavit备份的数据库，放在E:\users\gdnh\Documents\Navicat\MySQL\servers\local\mybatis
