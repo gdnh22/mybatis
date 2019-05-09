@@ -10,8 +10,11 @@ https://blog.csdn.net/linzhiqiang0316/article/details/78310884
 3 Dependencies，
 右上角SpringBoot2.1.4，
 勾选SQL/MySQL SQL/MyBatis（搜索mysql mybatis）
-next .
+点next .
 4 Project name填demo3
+目录 F:\github\mybatis.git\demo\demo3\project
+编译，不通过，因为没配置MYSQL。
+上传GIT
 
 
 1 在SpringBoot的启动类型里面增加扫描 Mapper 接口的注解
