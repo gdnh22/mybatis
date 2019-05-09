@@ -43,7 +43,7 @@ public class DemoApplication {
 //////////////////----------------------------- start
 #DB Configuration:
 spring.datasource.driverClassName = com.mysql.cj.jdbc.Driver
-spring.datasource.url = jdbc:mysql://localhost:3306/mybatis?useUnicode=true&characterEncoding=utf-8&useSSL=false
+spring.datasource.url = jdbc:mysql://localhost:3306/mybatis?serverTimezone=UTC
 spring.datasource.username = root
 spring.datasource.password = Sa123sa4
 //////////////////----------------------------- end
@@ -355,8 +355,6 @@ public class UserController {
 上传GIT。
 
 三、添加config类
-
-
 
 --------------三、执行结果-----------------
 127.0.0.1:8080/userlist

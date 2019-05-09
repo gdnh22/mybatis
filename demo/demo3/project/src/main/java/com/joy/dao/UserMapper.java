@@ -30,7 +30,6 @@ public interface UserMapper {
             @Result(property = "updateDate", column = "update_date") })
     UserEntity findById(long userId);
 
-
     @Insert("INSERT INTO USER(nick_name, user_code) VALUES(#{nickName}, #{userCode})")
     int insertParam(@Param("nickName") String nickName, @Param("userCode") String userCode);
 
