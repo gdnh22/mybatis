@@ -15,13 +15,17 @@ https://blog.csdn.net/linzhiqiang0316/article/details/78310884
 目录 F:\github\mybatis.git\demo\demo3\project
 编译，不通过，因为没配置MYSQL。
 上传GIT
+--------------------------------------
+连接MYSQL，首先NAVICAT要能正常连接
+
+
+备份数据库mybatis
+默认的数据库位置在哪？
+
 
 
 1 在SpringBoot的启动类型里面增加扫描 Mapper 接口的注解
-2 在application.properties配置文件中添加数据库的支持
-
-
-Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+2 在application.properties配置文件中添加数据库的支持【对应IEA201901】
 //////////////////----------------------------- start
 #DB Configuration:
 spring.datasource.driverClassName = com.mysql.cj.jdbc.Driver
@@ -31,6 +35,7 @@ spring.datasource.password = Sa123sa4
 //////////////////----------------------------- end
 
 旧的 application.properties
+Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
 //////////////////----------------------------- start
 #DB Configuration:
 spring.datasource.driverClassName = com.mysql.jdbc.Driver
@@ -70,3 +75,6 @@ INSERT INTO `user` VALUES ('2', '10002', 'user10002', 'no2', '123456', '2017-10-
 
 clean项目
 File->Invalidate Caches
+-------------------------------------------
+GIT中文乱码
+右键，Encoding，选择【UTF8】
