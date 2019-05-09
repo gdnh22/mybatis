@@ -67,9 +67,52 @@ INSERT INTO `user` VALUES ('2', '10002', 'user10002', 'no2', '123456', '2017-10-
 3 新建 映射数据库的类UserEntity
 
 注：mybatis和jpa不一样，不会通过映射实体类反向生成数据库的表和字段。
+-------------------------------
+入口DemoApplication处添加扫描注解。
+
+package com.example.demo;
+        import org.mybatis.spring.annotation.MapperScan;
+        import org.springframework.boot.SpringApplication;
+        import org.springframework.boot.autoconfigure.SpringBootApplication;
+        
+@SpringBootApplication
+@MapperScan("com.joy.*")    //扫描注解
+public class DemoApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
+}
+-------------------------------
 
 6 编写Mapper接口
 注解方式： @Insert @Delete @Update @Select
+
+在DAO目录写接口UserMapper，但是没有实现。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 clean项目
 File->Invalidate Caches
