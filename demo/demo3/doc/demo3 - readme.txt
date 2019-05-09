@@ -365,10 +365,9 @@ public class UserController {
 Whitelabel Error Page
 This application has no explicit mapping for /error, so you are seeing this as a fallback.
 
-Thu May 09 13:26:55 CST 2019
+Thu May 09 13:55:35 CST 2019
 There was an unexpected error (type=Internal Server Error, status=500).
-nested exception is org.apache.ibatis.exceptions.PersistenceException: ### Error querying database. Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: The server time zone value 'ÖÐ¹ú±ê×¼Ê±¼ä' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support. ### The error may exist in com/joy/dao/UserMapper.java (best guess) ### The error may involve com.joy.dao.UserMapper.queryList ### The error occurred while executing a query ### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: The server time zone value 'ÖÐ¹ú±ê×¼Ê±¼ä' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.
-
+nested exception is org.apache.ibatis.exceptions.PersistenceException: ### Error querying database. Cause: java.lang.RuntimeException: java.sql.SQLException: The server time zone value 'ÖÐ¹ú±ê×¼Ê±¼ä' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support. ### Cause: java.lang.RuntimeException: java.sql.SQLException: The server time zone value 'ÖÐ¹ú±ê×¼Ê±¼ä' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.
 
 
 
