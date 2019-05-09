@@ -93,6 +93,21 @@ public class DemoApplication {
 
 --------------二、调用Mapper接口-----------------
 1、com.joy.service.UserService
+2、com.joy.controller.UserController
+
+pom.xml添加
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.github.pagehelper/pagehelper-spring-boot-starter -->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper</artifactId>
+			<version>4.1.0</version>
+		</dependency>		
+import com.github.pagehelper.PageHelper;		
 
 
 
