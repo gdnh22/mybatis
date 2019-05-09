@@ -355,24 +355,11 @@ public class UserController {
 上传GIT。
 
 三、添加config类
+//////////////////////////////////////////////////////////
 
---------------三、执行结果-----------------
+//////////////////////////////////////////////////////////
+--------------四、执行结果-----------------
 127.0.0.1:8080/userlist
-
-抛出异常。。。。
-Whitelabel Error Page
-This application has no explicit mapping for /error, so you are seeing this as a fallback.
-
-Thu May 09 13:55:35 CST 2019
-There was an unexpected error (type=Internal Server Error, status=500).
-nested exception is org.apache.ibatis.exceptions.PersistenceException: ### Error querying database. Cause: java.lang.RuntimeException: java.sql.SQLException: The server time zone value 'ÖÐ¹ú±ê×¼Ê±¼ä' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support. ### Cause: java.lang.RuntimeException: java.sql.SQLException: The server time zone value 'ÖÐ¹ú±ê×¼Ê±¼ä' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.
-
-
-
-
-
-
-
 
 
 
@@ -386,5 +373,16 @@ nested exception is org.apache.ibatis.exceptions.PersistenceException: ### Error
 clean项目
 File->Invalidate Caches
 -------------------------------------------
+打印SQL语句
+application.properties添加
+//////////////////////////////////////////////////////
+# --- {Logging}
+logging.level.com.joy=DEBUG
+//////////////////////////////////////////////////////
+修改端口号
+application.properties添加
+server.port=8080
+
+
 GIT中文乱码
 右键，Encoding，选择【UTF8】
