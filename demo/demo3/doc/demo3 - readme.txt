@@ -111,6 +111,9 @@ import com.github.pagehelper.PageHelper;
 
 
 
+--------------三、执行结果-----------------
+127.0.0.1:8080/userlist
+
 
 
 
