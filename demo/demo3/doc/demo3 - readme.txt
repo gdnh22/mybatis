@@ -84,11 +84,12 @@ public class DemoApplication {
 }
 -------------------------------
 
-6 编写Mapper接口
+6 编写UserMapper接口
 注解方式： @Insert @Delete @Update @Select
 
 在DAO目录写接口UserMapper，但是没有实现。
 
+新建CLASS com.joy.dao.UserMapper 
 
 
 
