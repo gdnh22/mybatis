@@ -1,3 +1,4 @@
+【请关闭VPN再使用postman测试连接，否则500错误】
 原贴
 视频 https://pan.baidu.com/s/1qYcFDow
 https://github.com/1913045515/MyBatis
@@ -356,18 +357,90 @@ public class UserController {
 
 三、添加config类
 //////////////////////////////////////////////////////////
+package com.joy.config;
+
+import java.util.Properties;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.github.pagehelper.PageHelper;
+
+@Configuration
+public class MybatisConfig {
+	@Bean
+	public PageHelper pageHelper () {
+		System.out.println("...pageHelper...");
+		PageHelper pageHelper=new PageHelper();
+		Properties p=new Properties();
+		p.setProperty("offsetAsPageNum", "true");
+		p.setProperty("rowBoundsWithoutCount", "true");
+		p.setProperty("reasonable", "true");
+		pageHelper.setProperties(p);
+		return pageHelper;
+	}
+}
 
 //////////////////////////////////////////////////////////
 --------------四、执行结果-----------------
+查询
 127.0.0.1:8080/userlist
+通过ID查询
 
 
 
+新增
+UserController @RequestMapping("/insert")
+127.0.0.1:8080/insert
 
+报错：
+{
+    "timestamp": "2019-05-10T06:17:45.337+0000",
+    "status": 500,
+    "error": "Internal Server Error",
+    "message": "\r\n### Error updating database.  Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'user_code' at row 1\r\n### The error may exist in com/joy/dao/UserMapper.java (best guess)\r\n### The error may involve com.joy.dao.UserMapper.insertEntity-Inline\r\n### The error occurred while setting parameters\r\n### SQL: insert into user(nick_name,user_code,user_name,user_pwd,create_date,update_date) values(?,?,?,?,?,?)\r\n### Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'user_code' at row 1\n; Data truncation: Data too long for column 'user_code' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'user_code' at row 1",
+    "path": "/insert"
+}
 
+使用navicat将user_code列的长度改成200。
+再次执行insert。
 
+中文不显示？https://blog.csdn.net/qq_36533690/article/details/82184720
+修改字符集
+show VARIABLES like '%char%'
+检查是不是有latin1
+everything搜索my.ini
 
+找到[mysql]，在# default-character-set=的下一行添加default-character-set=utf8（图中第67行）
+找到[mysqld]，在# character-set-server=的下一行添加character-set-server=utf8（图中第102行）
+打开MySQL Workbench，INSTANCE，Startup/shutdown，关闭，重启。
+show VARIABLES like '%char%' 再次查询
 
+问题解决。
+
+只显示两条数据？
+PageHelper.startPage(1, 20); //修改第二个参数。
+改成传参模式，在body里面输入page，number
+
+3、更新数据
+修改1号数据
+    public int updateEntity() {
+        UserEntity entity=new UserEntity();
+        entity.setUserId(1);
+        entity.setNickName("郭靖修改了怪物猎人");
+        return mapper.updateEntity(entity);
+    }
+
+4、删除数据
+删除11号数据
+
+    public int deleteEntity() {
+        UserEntity entity=new UserEntity();
+        entity.setUserId(11);
+        return mapper.deleteEntity(entity);
+    }
+
+备份数据库mybatis，命名【mybatis_db20190510】
 
 
 clean项目

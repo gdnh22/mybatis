@@ -50,7 +50,7 @@ public class UserService {
     public int updateEntity() {
         UserEntity entity=new UserEntity();
         entity.setUserId(1);
-        entity.setNickName("郭靖");
+        entity.setNickName("郭靖修改了怪物猎人");
         return mapper.updateEntity(entity);
     }
 

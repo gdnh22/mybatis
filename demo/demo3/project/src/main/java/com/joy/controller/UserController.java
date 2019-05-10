@@ -15,8 +15,9 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	@RequestMapping("/userlist")
-	public List<UserEntity> queryList(){
-		PageHelper.startPage(1, 2);
+	public List<UserEntity> queryList(int page, int number){
+		//PageHelper.startPage(1, 20); //分页，固定
+        PageHelper.startPage(page, number);//需要在body里面传参。
 		return userService.queryList();
 	}
 
